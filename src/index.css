@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Navbar Link Efekti */
+.nav-link {
+  position: relative;
+  color: #4b5563;
+  transition: color 0.3s;
+}
+
+button svg {
+  color: #005110 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #005110 !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.5px;
+  bottom: -5px;
+  left: 0;
+  background-color: #005110;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+/* Body & Root */
+body, #root {
+  background-color: #f5f0eb;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  text-align: left;
+}
